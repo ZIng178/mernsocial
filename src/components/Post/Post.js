@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Post.css";
 import { MoreVert } from "@material-ui/icons";
 import asiangirl from "../../assests/persons/asiangirl.jpeg";
 import { Users } from "../../dummydata";
-
-import like from "../../assests/posts/like.png";
+import likebutton from "../../assests/posts/likebutton.png";
 import redheart from "../../assests/posts/redheart.jpg";
 
 const user = Users.filter((u) => u.id === 1);
@@ -12,7 +11,14 @@ const user = Users.filter((u) => u.id === 1);
 console.log("user", user);
 
 const Post = ({ post }) => {
-  console.log("posts", post);
+  const [like, setLike] = useState(post.like);
+  const [isliked, setIsLiked] = useState(false);
+
+  const likeHandler = () => {
+    setLike(isliked ? like - 1 : like + 1);
+    setIsLiked(!isliked);
+  };
+
   return (
     <div className="post">
       <div className="postWrapper">
@@ -39,12 +45,19 @@ const Post = ({ post }) => {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <img className="LikeIcon" src={like} alt="like" />
-            <img className="LikeIcon" src={redheart} alt="like" />
-            <span className="postLikeCounter">
-              {" "}
-              {post.like} people liked it{" "}
-            </span>
+            <img
+              className="LikeIcon"
+              src={likebutton}
+              onClick={likeHandler}
+              alt="like"
+            />
+            <img
+              className="LikeIcon"
+              src={redheart}
+              onClick={likeHandler}
+              alt="like"
+            />
+            <span className="postLikeCounter"> {like} people liked it </span>
           </div>
           <div className="postBottomRight">
             <span className="postCommentText"> {post.comment} comments </span>

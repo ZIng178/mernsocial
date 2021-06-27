@@ -2,7 +2,7 @@ import React from "react";
 import "./Rightbar.css";
 import gift from "../../assests/posts/gift.png";
 import ad from "../../assests/posts/ad.jpg";
-import baldbaige from "../../assests/persons/baldbaige.jpeg";
+
 import { Users } from "../../dummydata";
 import Online from "../Online/Online";
 
