@@ -24,9 +24,9 @@ const Profile = () => {
               <span className="profileInfoDesc"> Hello My friends </span>
             </div>
           </div>
-          <div className="profileRightBottom">
+          <div className="">
             <Feed />
-            <Rightbar />
+            <Rightbar profile />
           </div>
         </div>
       </div>

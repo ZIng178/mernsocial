@@ -1,6 +1,6 @@
 import React from "react";
 import "./Online.css";
-import user from "../../dummydata";
+
 const Online = ({ user }) => {
   return (
     <li className="rightbarFriend">

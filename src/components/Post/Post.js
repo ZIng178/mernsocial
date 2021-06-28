@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Post.css";
 import { MoreVert } from "@material-ui/icons";
-import asiangirl from "../../assests/persons/asiangirl.jpeg";
+
 import { Users } from "../../dummydata";
 import likebutton from "../../assests/posts/likebutton.png";
 import redheart from "../../assests/posts/redheart.jpg";
