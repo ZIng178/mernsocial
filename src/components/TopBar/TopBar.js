@@ -4,7 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import PersonIcon from "@material-ui/icons/Person";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import sh from "../../assests/persons/sh.jpeg";
+
 const TopBar = () => {
   return (
     <div className="topbarContainer">
@@ -35,7 +35,11 @@ const TopBar = () => {
             <span className="topBarIconBadge">1</span>
           </div>
         </div>
-        <img src={sh} className="topBarImage" alt="personImage" />
+        <img
+          src="assests/persons/sh"
+          className="topBarImage"
+          alt="personImage"
+        />
       </div>
     </div>
   );

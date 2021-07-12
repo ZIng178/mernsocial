@@ -1,5 +1,5 @@
 import "./share.css";
-import green from "../../assests/persons/green.jpeg";
+
 import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons";
 
 import React from "react";
@@ -9,7 +9,11 @@ const Share = () => {
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img className="shareProfilePicImg" src={green} alt="person3" />
+          <img
+            className="shareProfilePicImg"
+            src="assests/persons/green.jpeg"
+            alt="person3"
+          />
           <input
             placeholer="What's in your mind ? "
             className="shareInput"

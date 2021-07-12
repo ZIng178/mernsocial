@@ -1,12 +1,5 @@
 import React from "react";
 import "./Rightbar.css";
-import gift from "../../assests/posts/gift.png";
-import ad from "../../assests/posts/ad.jpg";
-import sh from "../../assests/persons/sh.jpeg";
-import asianmuslimgirl from "../../assests/persons/asianmuslimgirl.jpeg";
-import dreads from "../../assests/persons/dreads.jpeg";
-import green from "../../assests/persons/green.jpeg";
-import shindress from "../../assests/persons/shindress.jpeg";
 
 import { Users } from "../../dummydata";
 import Online from "../Online/Online";
@@ -16,13 +9,17 @@ const Rightbar = ({ profile }) => {
     return (
       <>
         <div className="birthdayContainer">
-          <img className="birthdayImg" src={gift} alt=" birthday" />
+          <img
+            className="birthdayImg"
+            src="/assests/posts/gift.png"
+            alt=" birthday"
+          />
           <span className="birthdayText">
             <b> Leksang Dhunden</b> and <b> 3 other friends </b> have a birthday
             today.
           </span>
         </div>
-        <img className="rightbarAd" src={ad} alt="ad" />
+        <img className="rightbarAd" src="/assests/posts/ad.jpg" alt="ad" />
         <h4 className="rightbarTitle"> Online Friends </h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
@@ -54,31 +51,51 @@ const Rightbar = ({ profile }) => {
         <h4 className="rightbarTitle">User friends</h4>
         <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img src={dreads} alt="" className="rightbarFollowingImg" />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
-          <div className="rightbarFollowing">
-            <img src={green} alt="" className="rightbarFollowingImg" />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
-          <div className="rightbarFollowing">
             <img
-              src={asianmuslimgirl}
+              src="assests/persons/dreads"
               alt=""
               className="rightbarFollowingImg"
             />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
           <div className="rightbarFollowing">
-            <img src={sh} alt="" className="rightbarFollowingImg" />
+            <img
+              src="assests/persons/green"
+              alt=""
+              className="rightbarFollowingImg"
+            />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
           <div className="rightbarFollowing">
-            <img src={shindress} alt="" className="rightbarFollowingImg" />
+            <img
+              src="assets/persons/asianmuslimgirl"
+              alt=""
+              className="rightbarFollowingImg"
+            />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
           <div className="rightbarFollowing">
-            <img src={sh} alt="" className="rightbarFollowingImg" />
+            <img
+              src="assests/persons/sh"
+              alt=""
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFollowingName">John Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assests/persons/shindress"
+              alt=""
+              className="rightbarFollowingImg"
+            />
+            <span className="rightbarFollowingName">John Carter</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assests/persons/sh"
+              alt=""
+              className="rightbarFollowingImg"
+            />
             <span className="rightbarFollowingName">John Carter</span>
           </div>
         </div>

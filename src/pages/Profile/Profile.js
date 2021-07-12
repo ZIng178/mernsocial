@@ -4,8 +4,6 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Feed from "../../components/Feed/Feed";
 import Rightbar from "../../components/Rightbar/Rightbar";
 import "./Profile.css";
-import postone from "../../assests/posts/postone.jpeg";
-import asiangirl from "../../assests/persons/asiangirl.jpeg";
 
 const Profile = () => {
   return (
@@ -16,8 +14,16 @@ const Profile = () => {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img className="profileCoverImg" src={postone} alt="postone" />
-              <img className="profileUserImg" src={asiangirl} alt="asiangirl" />
+              <img
+                className="profileCoverImg"
+                src="assests/posts/postone.jpeg"
+                alt="postone"
+              />
+              <img
+                className="profileUserImg"
+                src="assests/persons/asiangirl.jpeg"
+                alt="asiangirl"
+              />
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName"> Asian Girl </h4>
