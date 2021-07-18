@@ -5,6 +5,7 @@ import { Users } from "../../dummydata";
 import Online from "../Online/Online";
 
 const Rightbar = ({ profile }) => {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const HomeRightbar = () => {
     return (
       <>

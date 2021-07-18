@@ -4,12 +4,15 @@ import SearchIcon from "@material-ui/icons/Search";
 import PersonIcon from "@material-ui/icons/Person";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import { Link } from "react-router-dom";
 
 const TopBar = () => {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo"> TibetSocial</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo"> TibetSocial</span>
+        </Link>
       </div>
       <div className="topbarCenter"></div>
       <div className="searchbar">
@@ -36,7 +39,7 @@ const TopBar = () => {
           </div>
         </div>
         <img
-          src="assests/persons/sh"
+          src="assests/persons/sh.jpeg"
           className="topBarImage"
           alt="personImage"
         />
