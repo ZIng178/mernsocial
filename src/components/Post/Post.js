@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Post.css";
 import { MoreVert } from "@material-ui/icons";
-import { Users } from "../../dummydata";
-
-const user = Users.filter((u) => u.id === 1);
-
-console.log("user", user);
+import axios from "axios";
 
 const Post = ({ post }) => {
   const [like, setLike] = useState(post.like);
   const [isliked, setIsLiked] = useState(false);
+  const [user, setUser] = useState({});
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const response = await axios.get(`/users/${post.userId}`);
+      setUser(response.data);
+    };
+    fetchUser();
+  }, []);
 
   const likeHandler = () => {
     setLike(isliked ? like - 1 : like + 1);
@@ -24,13 +29,10 @@ const Post = ({ post }) => {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
+              src={user.profilePicture}
               alt="person4"
             />
-            <span className="postUsername">
-              {" "}
-              {Users.filter((u) => u.id === post.userId)[0].username}{" "}
-            </span>
+            <span className="postUsername"> {user.username} </span>
             <span className="postDate"> 5 mins ago </span>
           </div>
           <div className="postTopRight">
