@@ -16,7 +16,7 @@ const Feed = ({ username }) => {
       setPosts(response.data);
     };
     fetchPosts(username);
-  }, []);
+  }, [username]);
   return (
     <div className="feed">
       <div className="feedWrapper">
