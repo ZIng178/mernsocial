@@ -26,8 +26,8 @@ const Login = () => {
             Connect with Tibetans all around the World.
           </span>
         </div>
-        <div className="loginRight" onClick={handleClick}>
-          <form className="loginbox">
+        <div className="loginRight">
+          <form className="loginbox" onSubmit={handleClick}>
             <input
               placeholder="Email"
               type="email"
@@ -43,14 +43,20 @@ const Login = () => {
               className="loginInput"
               ref={password}
             />
-            <button className="loginButton">
-              {" "}
-              {isFetching ? <CircularProgress color="white" /> : "Login"}
+            <button className="loginButton" type="submit" disabled={isFetching}>
+              {isFetching ? (
+                <CircularProgress color="white" size="20px" />
+              ) : (
+                "Login"
+              )}
             </button>
             <span className="loginForgot"> Forgot Password?</span>
             <button className="loginRegisterButton">
-              {" "}
-              Create a new Account
+              {isFetching ? (
+                <CircularProgress color="white" size="20px" />
+              ) : (
+                "Create a New Account "
+              )}
             </button>
           </form>
         </div>
