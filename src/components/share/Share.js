@@ -2,22 +2,29 @@ import "./share.css";
 
 import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons";
 
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext";
 
 const Share = () => {
+  const { user } = useContext(AuthContext);
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
           <img
             className="shareProfilePicImg"
-            src="assests/persons/green.jpeg"
+            src={
+              user.profilePicture
+                ? PF + user.profilePicture
+                : PF + "persons/avatar.png"
+            }
             alt="person3"
           />
           <input
-            placeholer="What's in your mind ? "
+            placeholder={"What's in your mind  " + user.username + "?"}
             className="shareInput"
-          ></input>
+          />
         </div>
         <hr className="shareHr" />
         <div className="shareBottom">
