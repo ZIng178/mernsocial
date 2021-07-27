@@ -8,13 +8,12 @@ const Register = () => {
   const email = useRef();
   const password = useRef();
   const passwordAgain = useRef();
-
   const history = useHistory();
 
   const handleClick = async (e) => {
     e.preventDefault();
     if (passwordAgain.current.value !== password.current.value) {
-      password.current.setCustomValidity("passwords don't match ");
+      passwordAgain.current.setCustomValidity("passwords don't match ");
     } else {
       const user = {
         username: username.current.value,
@@ -68,7 +67,10 @@ const Register = () => {
               type="password"
               minlength="6"
             />
-            <button className="loginButton"> Sign Up </button>
+            <button className="loginButton" type="submit">
+              {" "}
+              Sign Up{" "}
+            </button>
 
             <button className="loginRegisterButton"> Log into Account</button>
           </form>

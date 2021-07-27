@@ -3,7 +3,6 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Profile from "./pages/Profile/Profile";
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +17,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           {user ? <Home /> : <Register />}
-          <Home />
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">
